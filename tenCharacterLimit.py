@@ -7,6 +7,9 @@ f.close()
 f = open("output.txt", "w")
 
 for word in inputText:
-	f.write(word)
+	if len(word) > 10:
+		f.write(word[:10])
+	else:
+		f.write(word)
 
 f.close()
